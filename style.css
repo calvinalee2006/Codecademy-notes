@@ -5,7 +5,6 @@ p{
 li {
     font-size: 25px;
     line-height:1.3;
-    list-style-type: none;
 }
 
 /* container */
@@ -29,7 +28,6 @@ h1 {
 }
 
 .resources {
-    
     background-color: #3186b2;
     width:30%;
     float:right;
@@ -55,7 +53,7 @@ h1 {
     color:#ff0000;
 }
 
-/*  */
+
 .chapter {
     background-color: #000;
     color: #fff;
@@ -66,3 +64,22 @@ h1 {
     list-style-type: none;
 
 }
+
+.direction {
+    font-size: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin:auto;
+    grid-template-columns: 1fr;
+}
+
+ .left {
+ }
+
+ .left a {
+     color: #000;
+ }
+
+ .left a:hover{
+     color: #ff0000;
+ }

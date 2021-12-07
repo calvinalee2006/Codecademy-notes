@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introcutction to JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="javaScript-1">
+            <h1>JavaScript</h1>
+        </div>
+
+        <h2>What is JavaScript?</h2>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>, also called JS, is a
+            flexible and powerful language that is implemented consistently
+            by various web browsers, making it the language for web development.
+            JavaScript, HTML, and CSS are the core components of web technology.
+            While HTML is responsible for structure and CSS is responsible for style,
+            JavaScript provides interactivity to web pages in the browser. (The link has tutorials for beginners,
+            Intermediate and advanced javaScript users.)</p>
+
+        <div class="javaScript-1">
+            <h3>Console</h3>
+        </div>
+
+        <ul>
+            <li>The console is a panel that displays important messages, like errors, for developers.</li>
+            <li>In JavaScript, the console keyword refers to an object, a collection of data and actions, that we can
+                use in our code.</li>
+            <li> <b>Keyowrds</b>are words that are built into the JavaScript language, so the computer will recognize
+                them and treats them specially.</li>
+            <li>One action, or method, that is built into the console object is the <i>.log()</i> method. When we write
+                console.log() what we put inside the parentheses will get printed, or logged, to the console.</li>
+        </ul>
+        <h3>Comments</h3>
+        <p>When collaborating it is better to leave comments for ourselves and other developers.
+            As we write JavaScript, we can write comments in our code that will ignore as our program runs.
+            These comments exist just for human readers.
+        </p>
+        <p>Comments can explain what the code is doing, leave instructions for developers using the code,
+            or add any other useful annotations.
+        </p>
+        <ul>
+            <li>A <i> single line comment</i>will comment out a single line and is denoted with two forward slashes //
+                preceding it.
+                You can also us ea single line comment to comment after a line of code.</li>
+            <li>A multi-line comment will comment out multiple lines and is denoted with /* to begin the comment, and */
+                to end the comment.
+                You can also use this syntax to comment something out in the middle of a line of code.
+            </li>
+        </ul>
+
+        <h3>Data Types</h3>
+        <p>Data types are the classifications we give to the different kinds of data that we use in programming.
+            In JavaScript, there are seven fundamental data types:</p>
+
+        <ul>
+            <li>Number: Any number, including numbers with decimals: 4, 8, 1516, 23.42.</li>
+            <li>String: Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.)
+                surrounded by single quotes: ' ... ' or double quotes " ... ". Though we prefer single quotes.
+                Some people like to think of string as a fancy word for text.</li>
+            <li>Boolean: This data type only has two possible values— either true or false (without quotes).
+                It’s helpful to think of booleans as on and off switches or as the answers to a “yes” or “no” questio
+            </li>
+            <li>Null: This data type represents the intentional absence of a value, and is represented by the keyword
+                null (without quotes).</li>
+            <li>Undefined: This data type is denoted by the keyword undefined (without quotes).
+                It also represents the absence of a value though it has a different use than null.</li>
+            <li>Symbol: A newer feature to the language, symbols are unique identifiers, useful in more complex coding.
+                No need to worry about these for now.</li>
+            <li>Object: Collections of related data.</li>
+        </ul>
+        <p>The first 6 of those types are considered primitive data types. They are the most basic data types in the
+            language.</p>
+
+        <h3>Arithmetic Operators</h3>
+        <p> JavaScript has several built-in arithmetic operators, that allow us to perform mathematical calculations on
+            numbers.
+            These include the following operators and their corresponding symbols:</p>
+        <ul>
+            <li>Add: +</li>
+            <li>Subtract: -</li>
+            <li>Multiply: *</li>
+            <li>Divide: /</li>
+            <li>Remainder(modulo): %</li>
+        </ul>
+        <p>The remainder operator, sometimes called modulo, returns the number that remains after the
+            right-hand number divides into the left-hand number as many times as it evenly can: 11 % 3
+            equals 2 because 3 fits into 11 three times, leaving 2 as the remainder.</p>
+
+        <h3>String Concatenation</h3>
+        <p>When a + operator is used on two strings, it appends the right string to the left string. This process of
+            appending one
+            strong to another is called <i>Concatenation</i>.
+        </p>
+        <p>Examples:<br />
+            console.log('hi' + 'ya'); // Prints 'hiya'
+            console.log('wo' + 'ah'); // Prints 'woah'
+            console.log('I love to ' + 'code.')
+            // Prints 'I love to code.'</p>
+        <p>Notice in the third example we had to make sure to include a space at the end of the first string. The
+            computer will join the strings exactly,
+            so we needed to make sure to include the space we wanted between the two strings.</p>
+
+        <h3>Properties</h3>
+        <p>When you introduce a new piece of data into a JavaScript program,
+            the browser saves it as an instance of the data type.
+            Every string instance has a property called length that stores the number of characters
+            in that string. You can retrieve property information by appending the string with a period
+            and the property name:</p>
+        <p>console.log('Hello'.length); // Prints 5</p>
+
+        <h3>Methods</h3>
+        <p>Remember that methods are actions we can perform. JavaScript provides a number of string methods.</p>
+        <p>We call, or use, these methods by appending an instance with:</p>
+        <ol>
+            <li>a period (the dot operator)</li>
+            <li>The name of the method</li>
+            <li>opening and closing parentheses</li>
+        </ol>
+        <p>Example: <br />
+            console.log('hello'.toUpperCase()); // Prints 'HELLO'
+            console.log('Hey'.startsWith('H')); // Prints true</p>
+        <p>You can find a list of built-in string methogds here at this <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">MDN
+                article</a></p>
+
+        <h3>Built-in Objects</h3>
+        <p>Other built-in objects can be found <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">here</a>
+        </p>
+        <p>The greatest thing about objects is that they have methods.</p>
+        <p>Example:<br />
+            console.log(Math.random()); // Prints a random number between 0 and 1</p>
+        <p>To see all of the properties and methods on the <i>Math</i>obect, take a look at the <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">MDN
+                article.</a> </p>
+    </div>
+</body>
+
+</html>
