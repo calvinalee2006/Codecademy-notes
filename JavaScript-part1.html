@@ -36,6 +36,7 @@
             <li>One action, or method, that is built into the console object is the <i>.log()</i> method. When we write
                 console.log() what we put inside the parentheses will get printed, or logged, to the console.</li>
         </ul>
+
         <h3>Comments</h3>
         <p>When collaborating it is better to leave comments for ourselves and other developers.
             As we write JavaScript, we can write comments in our code that will ignore as our program runs.
@@ -139,6 +140,142 @@
         <p>To see all of the properties and methods on the <i>Math</i>obect, take a look at the <a
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">MDN
                 article.</a> </p>
+
+        <h3>Variables</h3>
+        <p>A variable is a container for a value. Information stores in variables, such as a username, account number,
+            or even personalized greeting can then be found in memory.</p>
+        <p>Things you can do with variables such as:</p>
+        <ol>
+            <li>Create a variable with a descriptive name.</li>
+            <li>Store or update information stored in a variable.</li>
+            <li>Reference or "get" information stores in a variable.</li>
+        </ol>
+
+        <h3>Create a Variable: var</h3>
+        <p>Example:<br />
+            var myName = 'Arya';
+            console.log(myName);
+            // Output: Arya</p>
+        <ol>
+            <li>var, short for variable, is a JavaScript keyword that creates, or declares, a new variable.</li>
+            <li>myName is the variable’s name. This is used with <i>Camel Casing</i></li>
+            <li>= is the assignment operator. It assigns the value ('Arya') to the variable (myName).</li>
+            <li>'Arya' is the value assigned (=) to the variable myName. You can also say that the myName variable is
+                initialized with a value of 'Arya'.</li>
+            <li>Use console.log(myName) to print "Arya" to the console.</li>
+        </ol>
+        <p>A few rules for naming variables are:</p>
+        <ol>
+            <li>Variable names cannot start with numbers</li>
+            <li>Variable names are case sensative</li>
+            <li>Variable names cannot be the same as <i>keywords</i> for a list of keywords check out <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">this
+                    MDN documentation.</a></li>
+        </ol>
+        <p>To learn more about the <i>var</i>quirks check out <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"></a>this MDN
+            documentation.</p>
+
+        <h3>Create a Variable:let</h3>
+        <p>The let keyword signals that the variable can be reassigned a different value.</p>
+        <p> Example: <br />
+            let meal = 'Enchiladas';
+            console.log(meal); // Output: Enchiladas
+            meal = 'Burrito';
+            console.log(meal); // Output: Burrito</p>
+        <p>Another concept that we should be aware of when using let (and even var) is that we can declare a variable
+            without assigning the variable a value.</p>
+        <p>Example: <br />
+            let price;
+            console.log(price); // Output: undefined
+            price = 350;
+            console.log(price); // Output: 350</p>
+
+        <h3>Create a Variable: const</h3>
+        <p>const is short for the word constant. The way you declare a const variable and assign a valut to it follows
+            the same structure,
+            as let and var.
+        </p>
+        <p>Example: <br />
+            const myName = 'Gilberto';
+            console.log(myName); // Output: Gilberto</p>
+        <p>A const variable cannot be reassigned becuase it is a <i>constant</i>. If you try to reassign a const
+            variable, you'll get a TypeError.</p>
+        <p>Constant variables must be assigned a value when declared. If you try to declare a const variable without a
+            value, you’ll get a SyntaxError.</p>
+        <p>If you’re trying to decide between which keyword to use, let or const, think about whether you’ll need to
+            reassign the variable later on. If you do need to reassign the variable use let, otherwise, use const.</p>
+
+        <h3>Mathematical Assignment Operators</h3>
+        <p>Bult-in mathematical assignment operators <br />
+        <ul>
+            <li>If you wanted to add a value and get the total you would use +=</li>
+            <li>If you wanted to subtract a value and get the total you would use -=</li>
+            <li>If you wanted to multiply a value and get the total you would use *=</li>
+            <li>If you wanted to divide a value and get the total you would use /=</li>
+        </ul>
+        </p>
+        <p>Example: <br />
+            let x = 20;
+            x -= 5; // Can be written as x = x - 5
+            console.log(x); // Output: 15
+
+            let y = 50;
+            y *= 2; // Can be written as y = y * 2
+            console.log(y); // Output: 100
+
+            let z = 8;
+            z /= 2; // Can be written as z = z / 2
+            console.log(z); // Output: 4</p>
+
+        <h3>The Increment Decremnt Operator</h3>
+        <p>The increment operator (++) will increase the value of the variable by 1</p>
+        <p>Example: <br />
+            let a = 10;
+            a++;
+            console.log(a); // Output: 11</p>
+        <p>The Decrement operator (--) will decrease the valur of the variable by 1</p>
+        <p>Example: <br />
+            let b = 20;
+            b--;
+            console.log(b); // Output: 19</p>
+
+        <h3>String Concatenation with Variables</h3>
+        <p>The + operator ca nbe used to combine two strinf values even if those values are being stored in variables:
+            <br />
+            Example: <br />
+            let myPet = 'armadillo';
+            console.log('I own a pet ' + myPet + '.');
+            // Output: 'I own a pet armadillo.'
+        </p>
+
+        <h3>String Interpolation</h3>
+        <p>Template literals are used to insert or interpolate, variables into strings. </p>
+        <p>Example:<br />
+            const myPet = 'armadillo';
+            console.log(`I own a pet ${myPet}.`);
+            // Output: I own a pet armadillo.</p>
+        <p>Notes:
+        <ul>
+            <li>A template literal is wrapped by backticks ( ` ).</li>
+            <li>Inside the template literal, you’ll see a placeholder, ${myPet}. The value of myPet is inserted into the
+                template literal.</li>
+            <li>When we interpolate `I own a pet ${myPet}.`, the output we print is the string: 'I own a pet armadillo.'
+            </li>
+        </ul>
+        </p>
+        <h3>typeof operator</h3>
+        <p>The typeof operator checks the value to its right and returns, or passes back, a string of the data type.
+        </p>
+        <p>Example: <br />
+            const unknown1 = 'foo';
+            console.log(typeof unknown1); // Output: string
+
+            const unknown2 = 10;
+            console.log(typeof unknown2); // Output: number
+
+            const unknown3 = true;
+            console.log(typeof unknown3); // Output: boolean</p>
     </div>
 </body>
 
