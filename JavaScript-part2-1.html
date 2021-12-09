@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b75327775b.js" crossorigin="anonymous"></script>
+    <title>JavaScript 2-1</title>
+</head>
+
+<body>
+    <div class="contianer">
+        <h1>javaScript 2-1</h1>
+        <h3> If statement</h3>
+        <p>Example: <br />
+            if (true) {
+            console.log('This message will print!');
+            }
+            // Prints: This message will print!</p>
+        <ul>
+            <li>The if keyword followed by a set of parentheses () which is followed by a code block, or block
+                statement,
+                indicated by a set of curly braces {}.</li>
+            <li>Inside the parentheses (), a condition is provided that evaluates to true or false.</li>
+            <li>If the condition evaluates to true, the code inside the curly braces {} runs, or executes.</li>
+            <li>If the condition evaluates to false, the block won’t execute.</li>
+        </ul>
+
+        <h3>If...Else Statement</h3>
+        <p>if...else statements allow us to automate solutions to yes-or-no questions, also known as binary decisions.
+        </p>
+        <p>Example: <br />
+            if (false) {
+            console.log('The code in this block will not run.');
+            } else {
+            console.log('But the code in this block will!');
+            }
+
+            // Prints: But the code in this block will!</p>
+        <p>If we wanted to add some default behavior to the if statement, we can add an else statement to run a block of
+            code when the condition evaluates to false.
+        </p>
+
+        <h3>Comparison Operators</h3>
+        <p>Comparison operators compare the value on the left with the value on the right. For instance:</p>
+        <p>Example: <br />
+            10 &lt; 12 // Evaluates to true</p>
+        <ul>
+            <li>Less than: &lt; </li>
+            <li> Greater than: &gt; </li>
+            <li>Less than or equal to: &lt;= </li>
+            <li>Greater than or equal to: &gt;= </li>
+            <li>is equal to: === </li>
+            <li>is not equal to: !==</li>
+        </ul>
+
+        <h3>Logical Operators</h3>
+        <p>We can use logical operators to add more sopisticated logic to our conditionals.</p>
+        <p>The three logical operators are</p>
+        <ul>
+            <li>The <i>and</i> operator (&&):<br /></li>
+            <p>Example:</p>
+            <p> if (stopLight === 'green' && pedestrians === 0) {<br />
+                console.log('Go!');
+                }<br /> else {<br />
+                console.log('Stop');
+                }</p>
+            <ul>
+                <li>Used to check if two things are true.</li>
+                <li>When using the && operator, both conditions must evaluate to true for the entire condition to
+                    evaluate to true and execute.</li>
+                <li>Otherwise, if either condition is false, the && condition will evaluate to false and the else block
+                    will execute.</li>
+            </ul>
+            <li>The <i>or</i> operator (||)</li>
+            <p>Example:</p>
+            <p>if (day === 'Saturday' || day === 'Sunday') {<br />
+                console.log('Enjoy the weekend!');<br />
+                } else {<br />
+                console.log('Do some work.');
+                }</p>
+            <li>When using the || operator, only one of the conditions must evaluate to true for the overall statement
+                to evaluate to true.</li>
+            <li>The <i>not</i> operator, otherwise known as the ban operator (!)</li>
+            <p>Example:</p>
+            <p>let excited = true;<br />
+                console.log(!excited); // Prints false<br />
+                <br />
+                let sleepy = false;<br />
+                console.log(!sleepy); // Prints true
+            </p>
+            <li>The ! not operator reverses, or negates, the cale of a boolean.Essentially, the ! operator will either
+                take a true value and pass back false, or it will take a false value and pass back true.</li>
+        </ul>
+
+        <h3>Truthy and Falsy</h3>
+        <p>Sometimes, you’ll want to check if a variable exists and you won’t necessarily want it to equal a specific
+            value — you’ll only check to see if the variable has been assigned a value.</p>
+        <p>Example:</p>
+        <p>let myVariable = 'I Exist!';
+            <br />
+            if (myVariable) {<br />
+            console.log(myVariable)<br />
+            } else {<br />
+            console.log('The variable does not exist.')
+            }
+        </p>
+        <p>The code block in the if statement will run because myVariable has a truthy value; even though the value of
+            myVariable is not explicitly the value true, when used in a boolean or conditional context, it evaluates to
+            true because it has been assigned a non-falsy value.</p>
+        <p>So which values are falsy— or evaluate to false when checked as a condition? The list of falsy values
+            includes:</p>
+        <ul>
+            <li>0</li>
+            <li>Empty stirngs like "" or ''</li>
+            <li><b>null</b> which represent when a declared variable lacks a value</li>
+            <li><b>NaN</b>, or Not a Number</li>
+        </ul>
+        <p>If the condition wil evalutae to to false if any falsy values are used.</p>
+
+        <h3>Truthy and Falsy Assignment</h3>
+        <p>Say you have a website and want to take a user’s username to make a personalized greeting. Sometimes, the
+            user does not have an account, making the username variable falsy. The code below checks if username is
+            defined and assigns a default string if it is not:</p>
+        <p>let username = '';<br />
+            let defaultName;<br />
+            <br />
+            if (username) {<br />
+            defaultName = username;<br />
+            } else {<br />
+            defaultName = 'Stranger';<br />
+            }<br />
+
+            console.log(defaultName); // Prints: Stranger
+        </p>
+        <p>If you combine your knowledge of logical operators you can use a short-hand for the code above. In a boolean
+            condition, JavaScript assigns the truthy value to a variable if you use the || operator in your assignment:
+        </p>
+        <p>let username = '';<br />
+            let defaultName = username || 'Stranger';<br />
+            <br />
+            console.log(defaultName); // Prints: Stranger
+        </p>
+        <p>Because || or statements check the left-hand condition first, the variable defaultName will be assigned the
+            actual value of username if it is truthy, and it will be assigned the value of 'Stranger' if username is
+            falsy. This concept is also referred to as short-circuit evaluation. </p>
+
+        <h3>Ternary Operator</h3>
+        <p>Like if...else statements, ternary operators can be used for conditions which evaluate to true or false.</p>
+        <p>Example:</p>
+        <p>isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');</p>
+
+        <h3>Else If Statements</h3>
+        <p>The else if statement allows for more than two possible outcomes. You can add as many else if statements as
+            you'd like.</p>
+        <p>The else if statement always comes after the if statement and before the else statement. The else if
+            statement also takes a condition.</p>
+        <p>Example:</p>
+        <p>let stopLight = 'yellow';
+            <br />
+            if (stopLight === 'red') {<br />
+            console.log('Stop!');<br />
+            } else if (stopLight === 'yellow') {<br />
+            console.log('Slow down.');<br />
+            } else if (stopLight === 'green') {<br />
+            console.log('Go!');<br />
+            } else {<br />
+            console.log('Caution, unknown!'
+        </p>
+
+        <h3>The switch Keyword</h3>
+        <p>Example:</p>
+        <p>let groceryItem = 'papaya';
+            <br />
+            switch (groceryItem) {<br />
+            case 'tomato':<br />
+            console.log('Tomatoes are $0.49');<br />
+            break;<br />
+            case 'lime':<br />
+            console.log('Limes are $1.49');<br />
+            break;<br />
+            case 'papaya':<br />
+            console.log('Papayas are $1.29');<br />
+            break;<br />
+            default:<br />
+            console.log('Invalid item');<br />
+            break;<br />
+            }<br />
+
+            // Prints 'Papayas are $1.29'
+        </p>
+        <ul>
+            <li>The switch keyword initiates the statement and is followed by ( ... ), which contains the value that
+                each case will compare. In the example, the value or expression of the switch statement is groceryItem.
+            </li>
+            <li>Inside the block, { ... }, there are multiple cases. The case keyword checks if the expression matches
+                the specified value that comes after it. The value following the first case is 'tomato'. If the value of
+                groceryItem equalled 'tomato', that case‘s console.log() would run.</li>
+            <li>The value of groceryItem is 'papaya', so the third case runs— Papayas are $1.29 is logged to the
+                console.</li>
+            <li>The break keyword tells the computer to exit the block and not execute any more code or check any other
+                cases inside the code block. </li>
+            <li>At the end of each switch statement, there is a default statement. If none of the cases are true, then
+                the code in the default statement will run.</li>
+        </ul>
+    </div>
+</body>
+
+</html>
