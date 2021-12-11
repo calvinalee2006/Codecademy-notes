@@ -1,3 +1,4 @@
+/* Index */
 p{
     font-size:25px;
 }
@@ -73,9 +74,6 @@ h1 {
     grid-template-columns: 1fr;
 }
 
- .left {
- }
-
  .left a {
      color: #000;
  }
@@ -83,3 +81,14 @@ h1 {
  .left a:hover{
      color: #ff0000;
  }
+
+ /* JavaScript part-1 */
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 0px;
+}
+
+.subject {
+    font-size: 30px
+}
