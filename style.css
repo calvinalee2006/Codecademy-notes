@@ -82,13 +82,67 @@ h1 {
      color: #ff0000;
  }
 
- /* JavaScript part-1 */
-.title {
-    text-align: center;
-    font-size: 30px;
-    padding-top: 0px;
-}
+ /* End of Index */
+ /* JavaScript part 1 lesson */
+ .head {
+    font-family: 'Libre Baskerville', serif;
+    border: 6px solid #142d4c;
+    background-color: #142d4c;
+    color:#fff;
+    letter-spacing: 3px;
+ }
 
-.subject {
-    font-size: 30px
-}
+ .title {
+     font-size: 35px;  
+     line-height: 1.5;
+     text-align: center;
+     border-bottom: #ff0000 solid 5px;
+ }
+
+ .info{
+  left: 150px;
+ line-height: 1.5;
+ grid-template-columns: 1fr;
+ border-bottom: #5585b5 solid 5px;
+ }
+
+ .info a {
+     color:#0000ff ;
+     font-size: 30px;
+     text-decoration: none; 
+ }
+
+ .info a:hover {
+     color:#800080 ;
+ }
+
+ .info img{
+     height: 200px;
+     width: 200px;
+     float: right;
+ }
+
+ .subject h3{
+     font-size: 60px;
+     margin-top:0px;
+     margin-bottom: 20px;
+     text-align: center;
+     border-bottom: #5585b5 solid 5px;
+ }
+
+ .subject img {
+     height: 400px;
+     width: 800px;
+     padding-left: 10%;   
+ }
+
+ .subject ul li {
+    font-size: 25px;
+ }
+
+ .comments h3 {
+     font-size: 60px;
+    border-bottom: #5585b5 solid 5px;
+    border-top: #ff0000 solid 5px;
+    text-align: center;
+ }
